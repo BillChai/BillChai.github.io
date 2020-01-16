@@ -19,7 +19,7 @@
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    hostname: new URL('http://yoursite.com').hostname,
+    hostname: new URL('https://github.com/BillChai/My-Blog.git').hostname,
     root: '/',
     scheme: 'Gemini',
     version: '7.7.0',
@@ -48,13 +48,13 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="BillChai&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="https://github.com/BillChai/My-Blog.git/index.html">
 <meta property="og:site_name" content="BillChai&#39;s Blog">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Bill Chai">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="https://github.com/BillChai/My-Blog.git/">
 
 
 <script id="page-configurations">
@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/05/Feeling/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/BillChai/My-Blog.git/2020/01/05/Feeling/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -240,7 +240,21 @@
                 </span>
             </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
 
         </div>
       </header>
@@ -271,7 +285,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/04/Statistic/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/BillChai/My-Blog.git/2020/01/04/Statistic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -302,7 +316,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-06 01:20:09" itemprop="dateModified" datetime="2020-01-06T01:20:09+09:00">2020-01-06</time>
+                <time title="Modified: 2020-01-09 21:11:28" itemprop="dateModified" datetime="2020-01-09T21:11:28+09:00">2020-01-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -316,7 +330,21 @@
                 </span>
             </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
 
         </div>
       </header>
@@ -330,25 +358,85 @@
           <h2 id="Statistic-Test"><a href="#Statistic-Test" class="headerlink" title="Statistic Test"></a>Statistic Test</h2><blockquote>
 <p>以下為以日文統計專有名詞為主的筆記</p>
 </blockquote>
-<h3 id="基礎筆記"><a href="#基礎筆記" class="headerlink" title="基礎筆記"></a>基礎筆記</h3><ul>
+<h3 id="基礎筆記"><a href="#基礎筆記" class="headerlink" title="基礎筆記"></a>基礎筆記</h3><ol>
 <li><p>分散$=\frac{絕對偏差平方}{總數}$</p>
 </li>
 <li><p>標準偏差$=\sqrt{分散}$</p>
 </li>
-<li><p>標準化$=\frac{測定值-平均}{標準差}$</p>
-<p>通過標準化來使得分散一至為一</p>
+<li><blockquote>
+<p>標準化$=\frac{測定值-平均}{標準差}$</p>
+<p>$\Rightarrow$通過標準化來使得分散一至為一</p>
+</blockquote>
 </li>
-<li><p>共分散$=Cov(X,Y)=\frac{\Sigma(X-u_{x})(Y-u_{y})}{n}$<br>$Cov(X,Y)=E(XY)-u_{x}u_{y}$</p>
+<li><blockquote>
+<p>共分散$=Cov(X,Y)=\frac{\Sigma(X-u_{x})(Y-u_{y})}{n}$</p>
+<p>$Cov(X,Y)=E(XY)-u_{x}u_{y}$</p>
+</blockquote>
 </li>
 <li><p>相關係數$=r=\frac{\Sigma(X-u_{x})(Y-u_{y})}{n\sigma_{x}\sigma_{y}}=\frac{Cov(X,Y)}{\sigma_{x}\sigma_{y}}$  </p>
 </li>
-<li><p>回歸直線</p>
+<li><blockquote>
+<p>回歸直線</p>
 <p>設回歸直線為 $y=ax+b$</p>
 <p>$y=r\times \frac{\sigma_{y}}{\sigma_{x}} \times x +b$</p>
 <p>$\Rightarrow 斜率a=r\times \frac{\sigma_{y}}{\sigma_{x}}=\frac{Cov(X,Y)}{\sigma_{x}^2}$</p>
+</blockquote>
 </li>
-</ul>
-
+</ol>
+<h3 id="小練習"><a href="#小練習" class="headerlink" title="小練習"></a>小練習</h3><p><a href="https://www.learnmode.net/upload/flip/book/e0/e08fb274e69efe4a/f1c8fef845f7.pdf" target="_blank" rel="noopener">https://www.learnmode.net/upload/flip/book/e0/e08fb274e69efe4a/f1c8fef845f7.pdf</a></p>
+<h3 id="第二章-機率統計"><a href="#第二章-機率統計" class="headerlink" title="第二章 機率統計"></a>第二章 機率統計</h3><ol>
+<li><p>$P(A)=\frac{A的要素}{總要素}$</p>
+</li>
+<li><blockquote>
+<p>條件分佈機率 $P(A|B)=\frac{P(A \cap B)}{P(B)}$</p>
+<p>$\Longrightarrow P(A \cap B)=P(A|B)P(B)$</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>獨立事項 定義 $P(A \cap B)=P(A)P(B)$</p>
+<p>$\Longrightarrow \frac{P(A \cap B)}{P(B)}=P(A)$</p>
+<p>$\Longrightarrow P(A | B)=P(A)$ 得證</p>
+</blockquote>
+</li>
+<li><p>機率分佈 $平均=\mu=\Sigma x_{i}P(X_{i})$</p>
+</li>
+<li><blockquote>
+<p>機率分佈 $分散=Var= \Sigma (x- \mu)^2\times P(x_{i})$</p>
+<p>$標準差=\sigma ^2= \Sigma (x- \mu)^2\times P(x_{i})$</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>機率分佈 $期待值=E(X)=\mu$</p>
+<p>$E{f(x)}=\Sigma f(x_{i})\times P(x_{i}$</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>機率分佈 $分散 =V(x)= \sigma^2=E{(x-\mu)^2}$</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>正規分布 函數定義 $N(\mu,\sigma^2)$</p>
+<p>若線性函數$Y=aX+b$ $\Longrightarrow N(a\mu+b,a^2\sigma^2)$</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p><strong><strong>小練習</strong></strong></p>
+<blockquote>
+<p>Ex1:</p>
+<p>小學生的身高 X (cm) 的分佈為$N(118,6^2)$的時候</p>
+<p>替換單位為公尺時</p>
+<p>$Y=0.01X$的分佈為$N(1.18,0.06^2)$</p>
+<p>Ex2:</p>
+<p>X的分佈$N(50,10^2)的時候$ 求機率$P(40 \leq X \leq 65)$</p>
+<p>$標準化=Z=\frac{X-50}{10}$</p>
+<p>使得範圍映射為$N(0,1)$</p>
+<p>$\frac{40-50}{10} \leq \frac{X-50}{10} \leq \frac{65-50}{10}$</p>
+<p>$\Longrightarrow P(40 \leq X \leq 65)=P(-1 \leq Z \leq 1.5)$求Z在標準分佈下的機率(查表)</p>
+<p>$=P(1.5)-P(-1)=0.9332-0.1587=0.7745$</p>
+</blockquote>
+</blockquote>
+<h3 id="第三章-統計方式"><a href="#第三章-統計方式" class="headerlink" title="第三章 統計方式"></a>第三章 統計方式</h3>
       
     </div>
 
@@ -367,7 +455,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/02/English-Test/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/BillChai/My-Blog.git/2020/01/02/English-Test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -398,7 +486,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-07 18:41:43" itemprop="dateModified" datetime="2020-01-07T18:41:43+09:00">2020-01-07</time>
+                <time title="Modified: 2020-01-16 16:03:22" itemprop="dateModified" datetime="2020-01-16T16:03:22+09:00">2020-01-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -412,7 +500,21 @@
                 </span>
             </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
 
         </div>
       </header>
@@ -485,6 +587,12 @@
 <li>teach it some basic rules</li>
 </ul>
 <p>Dogs have been our good friends for thousands of year.Now we treated dogs as a family memeber and really enjoy staying with our dogs. These are some tips we train our dogs. In the first step we have to teach our dog its name. And then we treach it to walk with a rope or leash at first. Now we teach it some basic rules to get used to our home more quickly! Though training dogs take time , it is a really funny to staying with them and have a good time.</p>
+<blockquote>
+<blockquote>
+<p>Listening</p>
+</blockquote>
+</blockquote>
+<p>The documentary film, A Class Divided recreates an experiment that was done in 1968. The experiment looked into the question, why does recism happen. The teacher decided to try this experiment after Martin Luther King was assassinated. Martin Luther King was a man of peace who fought against recism, and he was assassinated in 1968. Shocked by his death, a third grade elementary school teacher, Ms.Jane Elliot, decided to investigaet racism. She decided to start treating the students with blue eyes better than the students with brown eyes. The blue eyed students sat at the front of the classroom, the brown eyed students sat at the back. The blue-eyed students were given extra play time. She told the class that the blue-eyed students were more intelligent. And what happended? Well, the blue-eyed students did better. They did better in class. The answered the questions more quickly, also started to treat the brown-eyed students badly. They were rude to them, talked down to them, and started to act as if they were better.</p>
 <h4 id="Unit-10-Economic-Systems"><a href="#Unit-10-Economic-Systems" class="headerlink" title="Unit 10 Economic Systems"></a>Unit 10 Economic Systems</h4><ul>
 <li><p><strong><em>Private ownership</em></strong> describes property that is owned by an individual, or a group of individuals, and not the government.</p>
 </li>
@@ -521,6 +629,12 @@
 <li><p>commercial jets</p>
 </li>
 </ul>
+<h4 id="Summary-of-the-article"><a href="#Summary-of-the-article" class="headerlink" title="Summary of the article"></a>Summary of the article</h4><p>Concorde is a supersonic plane famous for its speed and safety before.Concord had became commercial usage until 2000. Concorde Flight 4590 an Air France flight from Paris to New York crashed after takeoff killing every people on the plane and also the people nearby. Concorde was crashed because of the main engine fail. While Flight 4590 takeoff , the tire exploded because of the metal on the runway cut the tire and the explosion cause the damage to the fuel tank which cause a huge fire makes the main engine fail.</p>
+<p>The Concorde had delta wings. These are wings that look like a triangle. In fact, they got their name because the shape of the wings looks like the Greek lette Delta. The deltawing is good fore planes that fly very fast. However, one problem with the delta wing is that the takeoff speed needs to be very fast. The takeoff speed for the Concorde was much faster than other commercial plaves. This high speed caused the tire to completely explode when the metal cut the tire.</p>
+<blockquote>
+<p>Listening</p>
+</blockquote>
+<p>Of course, the Concorde was an amazing plave. It was amazing to see and amazing to fly in. However, there were some problems. First of all, yes everyseat was first class. But, the plane had to be narrow for super-sonic flight, so the seats on the Concorde were also narrow. The seats were small and not very comfortable. However, yes. the Concorde was fast. It traveled at twice the speed of sound. But it used a lot of fuel. On average , the Concorde used 25,500 liters of fuel per hour. So, on a three and a half hour flight to New York, it used 89,250 liters of fuel. Compare that to a 777. A 777 flying to New York from London used around 60,000 liters of fuel. And it carried 300 people. So it wasn’t very efficient. Lastly, the price, the seats cost about $12,000. So Concorde was really a toy of the super-rich, famous actors, famous musicians and so on. It was really too expensive for most people.</p>
 <h4 id="Scientific-Terminology"><a href="#Scientific-Terminology" class="headerlink" title="Scientific Terminology"></a>Scientific Terminology</h4><ul>
 <li><p>A cushion is a soft object that protects something from damagel like a pillow.</p>
 </li>
@@ -558,7 +672,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/31/Numerical_Software_Tools_in_C/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/BillChai/My-Blog.git/2019/12/31/Numerical_Software_Tools_in_C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -603,7 +717,21 @@
                 </span>
             </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
 
         </div>
       </header>
@@ -640,7 +768,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/26/Fist-Hexo/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/BillChai/My-Blog.git/2019/12/26/Fist-Hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -685,7 +813,21 @@
                 </span>
             </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
 
         </div>
       </header>
@@ -718,7 +860,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/26/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/BillChai/My-Blog.git/2019/12/26/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -752,7 +894,21 @@
                 <time title="Modified: 2020-01-04 22:37:00" itemprop="dateModified" datetime="2020-01-04T22:37:00+09:00">2020-01-04</time>
               </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
 
         </div>
       </header>
@@ -901,6 +1057,16 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Bill Chai</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="Symbols count total">NaNm</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">NaN:aN</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
   </div>

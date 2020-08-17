@@ -272,14 +272,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>6k</span>
+              <span>8.7k</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>11 分鐘</span>
+              <span>16 分鐘</span>
             </span>
 
         </div>
@@ -294,6 +294,76 @@
         <p>モデリング理論では、今まで、カオス理論、NetWork Theory理論などを含めて議論した。<br />
 授業内容は大体ロジスティック写像の固定点、安定性の議論からカオスを紹介することとNetWork Theory理論を議論する。</p>
 <a id="more"></a>
+<h2 id="講義内容のまとめ"><a class="markdownIt-Anchor" href="#講義内容のまとめ"></a> 講義内容のまとめ</h2>
+<h3 id="線形な差分方程式と非線形な差分方程式"><a class="markdownIt-Anchor" href="#線形な差分方程式と非線形な差分方程式"></a> 線形な差分方程式と非線形な差分方程式</h3>
+<p>差分方程式とは</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mi mathvariant="normal">　</mi><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">    x_{t+1}　= f(x_t)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.638891em;vertical-align:-0.208331em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mord cjk_fallback">　</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+<p>というrecurrence relationを持つ関係の数学式.まだ<br />
+「線形」と「非線形」とはこの差分方程式が</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mtable rowspacing="0.24999999999999992em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mi>a</mi><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><mi>X</mi><mo>+</mo><mi>b</mi><mi>Y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi><mi>f</mi><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo><mo>+</mo><mi>b</mi><mi>f</mi><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+&amp; af(x) = f(ax) \\
+&amp; f(aX + bY) = af(X) + bf(Y)
+\end{aligned}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.0000000000000004em;vertical-align:-1.2500000000000002em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.7500000000000002em;"><span style="top:-3.75em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2500000000000002em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.7500000000000002em;"><span style="top:-3.91em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mclose">)</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">b</span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">b</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2500000000000002em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>を満たすと線形な差分方程式である,成り立たないと<br />
+非線形な差分方程式であるという.授業内では図式解法と微分の分析から固定点,周期解の安定性<br />
+,不安定性を説明した.固定点,周期解の安定性,不安定性を議論することで<br />
+程式を解析するときに波形の上限と下限を探索することができ,最適化対応や計算<br />
+のある手法である.\</p>
+<p>まだロジスティック写像を差分方程式で計算することはカオス<br />
+の研究重要な課題であり,分岐図などから簡潔な数式でも綺麗な複雑な振る舞いが<br />
+でき,固定点,周期解の分析などを広めることや初期値鋭敏依存性などのこと<br />
+が見られる.</p>
+<h3 id="カオスとは"><a class="markdownIt-Anchor" href="#カオスとは"></a> カオスとは</h3>
+<p>カオスとは少数自由度の決定論的非線形ダイナミクス形生み出される現象である<br />
+まだ,授業内では以下のようなカオスの特徴を紹介した.</p>
+<ol>
+<li>非周期性時系列として観測すると同じ状態は二度と生じないことが一つの特徴である.</li>
+<li>有界性カオス理論で資料を図で表示するともちろん写像の振る舞いや事項の変遷は非線 形で不規則な図になるが, 状態値は strange attractor と呼ばれる一定な規則や原則により 変化するので, 何回振る舞いしても有限な空間に存在することが観察できる.</li>
+<li>初期値鋭敏依存性初期値鋭敏依存性(sensitivity to initial conditions)まだは the butterfly effect とは初期値が少しでも異なると結果や振る舞いの過程が全く異なること. つまり System 内の変化は初期値の変更より System の変化は非線形で予測し難しいである.</li>
+</ol>
+<p>カオスでは決定論的であるでも予測不能の理論であり,有名的では Butterfly 理論<br />
+と呼ばれる小さいな差では事情の続きに大きな変化を与えることがある。まだカオス<br />
+は決定論と確率論の解釈は矛盾ではなく,両方とも成り立つことを証明して,<br />
+初期値の鋭敏依存性でモデルの予測が複雑,<br />
+予測不能になったが,有界性である程度の範囲などの分析ができると指摘している.</p>
+<h3 id="カオス学の歴史"><a class="markdownIt-Anchor" href="#カオス学の歴史"></a> カオス学の歴史</h3>
+<p>アンリ・ポアンカレはアンリ・ポアンカレは19世紀フランスでの有名な数学と物理学者<br />
+であり,二体問題の続きに三体問題を否定的に証明して,カオスでいう現象を発見した<br />
+ことが現代的なカオス理論の発展の契機と言われる.</p>
+<p>まだ授業では以下の幾つのカオス関連する実験と発見者を紹介した.</p>
+<ol>
+<li>van der Pol, van der Mark van der Pol, van der Markが真空管の電路の振る舞いのある周波数では予測できない雑音になることを発見して,カオス理論の決定論としても予測不能であることを示した.</li>
+<li>S. Ulam , John von Neumann S. UlamとJohn von Neumannでは決定論と確率論は両方も矛盾ではないことを証明して,量子力学とカオスの概念や基礎思想を重要な考え思想と言える.</li>
+<li>C. Hayashi, Y. Ueda, H. Kawakami Y. Uedaはある電気回路の周波数引き込みこともカオス現象あると発見した.</li>
+<li>E. N. Lorenz E. N. Lorenzは大気変動モデルからカオス現象を発見して,カオスでは初期値鋭敏依存性を持つ特徴を提出した.</li>
+<li>T. Li, J. A. Yorke李天岩とJ.A.Yorkはローレンツの考えを参考にこれまでのストレンジアトラクターをカオスと命名した論文「Period Three Implies Chaos」を発表してカオス研究なる新しい分野を切り開くことになった.</li>
+<li>R. May R. Mayは生物種の個体数の変動もカオス的な動きなどを説明できることをカオス現象の分野と視点を更に広くなったことが言える.</li>
+</ol>
+<p>カオス学では20世紀の三大発見の一つである,カオスにおける実験や研究もこれから進んでいくと考えられる.</p>
+<h3 id="複雑ネットワーク理論"><a class="markdownIt-Anchor" href="#複雑ネットワーク理論"></a> 複雑ネットワーク理論</h3>
+<p>複雑ネットワークは,多数の因子が相互に影響しあうことでシステム全体の性質が決まるという点<br />
+から現実世界に存在する巨大で複雑なネットワークの性質について研究する学問である.</p>
+<p>オイラーのグラフ理論から創始する学問と言われ,社会学における現実の世界のSmall World特徴や現象を発見して,<br />
+1998年Duncan J. WattsのCollective Dynamics of 「Small-World」 Networks論文では頂点数と枝数から以下の論点を分析する.</p>
+<ol>
+<li>次数分布と平均次数：頂点間関係はネットワーク全体の特性を観察することができる.</li>
+<li>クラスタ係数：クラスタ係数からネットワークの凝集性を表現できることとクラスタ係数が高いとネットワークは関係の密度が高いと見れる.</li>
+<li>平均頂点間距離：まだ平均頂点距離によりネットワークのおおよその大きさを表現可能である.まだ違うネットワークでは平均頂点間距離を違う意味を与えることが可能である.（例えば感染病の感染時間などの分析</li>
+</ol>
+<p>これらの研究では現実世界に実用できるモデルをどんどん研究している.<br />
+完全グラフ,WSモデル,ランダンマイズしたWSモデル,BAモデルなどのモデルが提出された.<br />
+これらのモデルでは現実世界へ近づくことが目標である.授業内で扱った内容は規則的ではなく,<br />
+ランダム的でもなく現実世界にある一部対応する（現実社会と同じ現象が観察できる）モデル<br />
+の特徴はがスケールフリーという成長と優先的選択したところで,べき法則などの現象が観察されるBAモデル<br />
+とBAモデルの拡張などのモデルを最後に紹介した.</p>
+<h3 id="同期現象"><a class="markdownIt-Anchor" href="#同期現象"></a> 同期現象</h3>
+<p>同期現象とは,自分の速度があって,他の速度により調整することは同期現象と呼べれる.<br />
+同期現象では日常生活でも観察できる現象であり,授業内では幾つの例を紹介した.<br />
+例えばメトロノーム,蛍の発光,カエルの鳴き声などの同期現象が観察される.<br />
+同期現象は身周りでもよく発生する現象であり,この現象の研究はどうの応用するなどにはまだ<br />
+時間かかるが,これから期待される研究と考えられる.</p>
 <h2 id="課題一之二"><a class="markdownIt-Anchor" href="#課題一之二"></a> 課題一之二</h2>
 <h3 id="問一"><a class="markdownIt-Anchor" href="#問一"></a> 問一</h3>
 <p>差分方程式</p>
@@ -647,7 +717,7 @@ y_{t+1} =2 - 2y_t
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#課題一之二"><span class="nav-number">1.</span> <span class="nav-text"> 課題一之二</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#問一"><span class="nav-number">1.1.</span> <span class="nav-text"> 問一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#問二"><span class="nav-number">1.2.</span> <span class="nav-text"> 問二</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#課題一之三20200617"><span class="nav-number">2.</span> <span class="nav-text"> 課題一之三(2020&#x2F;06&#x2F;17)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#問一-2"><span class="nav-number">2.1.</span> <span class="nav-text"> 問一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#問題二"><span class="nav-number">2.2.</span> <span class="nav-text"> 問題二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#問題三"><span class="nav-number">2.3.</span> <span class="nav-text"> 問題三</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#課題二"><span class="nav-number">3.</span> <span class="nav-text"> 課題二</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#問一-3"><span class="nav-number">3.1.</span> <span class="nav-text"> 問一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#問二-2"><span class="nav-number">3.2.</span> <span class="nav-text"> 問二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#問題三-2"><span class="nav-number">3.3.</span> <span class="nav-text"> 問題三</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2020年7月1日課程內容"><span class="nav-number">4.</span> <span class="nav-text"> 2020年7月1日課程內容</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#講義内容のまとめ"><span class="nav-number">1.</span> <span class="nav-text"> 講義内容のまとめ</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#線形な差分方程式と非線形な差分方程式"><span class="nav-number">1.1.</span> <span class="nav-text"> 線形な差分方程式と非線形な差分方程式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#カオスとは"><span class="nav-number">1.2.</span> <span class="nav-text"> カオスとは</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#カオス学の歴史"><span class="nav-number">1.3.</span> <span class="nav-text"> カオス学の歴史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#複雑ネットワーク理論"><span class="nav-number">1.4.</span> <span class="nav-text"> 複雑ネットワーク理論</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同期現象"><span class="nav-number">1.5.</span> <span class="nav-text"> 同期現象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#課題一之二"><span class="nav-number">2.</span> <span class="nav-text"> 課題一之二</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#問一"><span class="nav-number">2.1.</span> <span class="nav-text"> 問一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#問二"><span class="nav-number">2.2.</span> <span class="nav-text"> 問二</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#課題一之三20200617"><span class="nav-number">3.</span> <span class="nav-text"> 課題一之三(2020&#x2F;06&#x2F;17)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#問一-2"><span class="nav-number">3.1.</span> <span class="nav-text"> 問一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#問題二"><span class="nav-number">3.2.</span> <span class="nav-text"> 問題二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#問題三"><span class="nav-number">3.3.</span> <span class="nav-text"> 問題三</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#課題二"><span class="nav-number">4.</span> <span class="nav-text"> 課題二</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#問一-3"><span class="nav-number">4.1.</span> <span class="nav-text"> 問一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#問二-2"><span class="nav-number">4.2.</span> <span class="nav-text"> 問二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#問題三-2"><span class="nav-number">4.3.</span> <span class="nav-text"> 問題三</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2020年7月1日課程內容"><span class="nav-number">5.</span> <span class="nav-text"> 2020年7月1日課程內容</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -720,12 +790,12 @@ y_{t+1} =2 - 2y_t
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="總字數">26k</span>
+    <span title="總字數">29k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="所需總閱讀時間">48 分鐘</span>
+    <span title="所需總閱讀時間">52 分鐘</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 強力驅動 v4.2.1
   </div>

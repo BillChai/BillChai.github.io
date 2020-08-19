@@ -46,13 +46,19 @@
   };
 </script>
 
-  <meta name="description" content="第11堂課 内容:ソフトウェアテストと品質管理 テストには色々なプロセスはあるが、今回はテストケースの生成とテスト実行を注目する。  ソフトウェアの品質管理では**欠陥はなるべく早期に除去するのが鉄則。**そのために、プログラムの検査を行い、単体テスト、システムテストや受入検査などの方法がある。 ソフトウェアテスト:正しいだけじゃなく、欠陥を見つ けるためにテストを行う。  テストの種類  単体">
+  <meta name="description" content="前言 這堂課日文名為ソフトウェア工学，為一門教授商業軟體設計的SOP以及注意事項的一堂課，可以幫助自己分析以及評估出工程的發展以及好壞。 課程目標為  ソフトウェア開発の流れと，大規模ソフトウェア開発の課題について理解し概要を説明できる. ソフトウェア工学の代表的なモデル，プロセス，ツールについてその概要を説明できる. ソフトウェア工学の代表的な手法を，簡単な問題に対して適用し，要求仕様書，設計">
 <meta property="og:type" content="article">
 <meta property="og:title" content="軟體設計">
 <meta property="og:url" content="https://github.com/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/index.html">
 <meta property="og:site_name" content="BillChai&#39;s Blog">
-<meta property="og:description" content="第11堂課 内容:ソフトウェアテストと品質管理 テストには色々なプロセスはあるが、今回はテストケースの生成とテスト実行を注目する。  ソフトウェアの品質管理では**欠陥はなるべく早期に除去するのが鉄則。**そのために、プログラムの検査を行い、単体テスト、システムテストや受入検査などの方法がある。 ソフトウェアテスト:正しいだけじゃなく、欠陥を見つ けるためにテストを行う。  テストの種類  単体">
+<meta property="og:description" content="前言 這堂課日文名為ソフトウェア工学，為一門教授商業軟體設計的SOP以及注意事項的一堂課，可以幫助自己分析以及評估出工程的發展以及好壞。 課程目標為  ソフトウェア開発の流れと，大規模ソフトウェア開発の課題について理解し概要を説明できる. ソフトウェア工学の代表的なモデル，プロセス，ツールについてその概要を説明できる. ソフトウェア工学の代表的な手法を，簡単な問題に対して適用し，要求仕様書，設計">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://github.com/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/image1_1.png">
+<meta property="og:image" content="https://github.com/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/image2_1.jpg">
+<meta property="og:image" content="https://github.com/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/image4_1.png">
+<meta property="og:image" content="https://github.com/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/image4_2.png">
+<meta property="og:image" content="https://github.com/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/image4_3.png">
+<meta property="og:image" content="https://github.com/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/image6_1.png">
 <meta property="article:published_time" content="2020-07-27T00:05:49.000Z">
 <meta property="article:modified_time" content="2020-07-27T00:05:49.000Z">
 <meta property="article:author" content="Bill Chai">
@@ -60,6 +66,7 @@
 <meta property="article:tag" content="Third Grade">
 <meta property="article:tag" content="Software Engineering">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/image1_1.png">
 
 <link rel="canonical" href="https://github.com/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/">
 
@@ -273,14 +280,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>813</span>
+              <span>3.7k</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>1 分鐘</span>
+              <span>7 分鐘</span>
             </span>
 
         </div>
@@ -292,7 +299,195 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="第11堂課"><a class="markdownIt-Anchor" href="#第11堂課"></a> 第11堂課</h2>
+        <h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>這堂課日文名為ソフトウェア工学，為一門教授商業軟體設計的SOP以及注意事項的一堂課，可以幫助自己分析以及評估出工程的發展以及好壞。</p>
+<p>課程目標為</p>
+<ol>
+<li>ソフトウェア開発の流れと，大規模ソフトウェア開発の課題について理解し概要を説明できる.</li>
+<li>ソフトウェア工学の代表的なモデル，プロセス，ツールについてその概要を説明できる.</li>
+<li>ソフトウェア工学の代表的な手法を，簡単な問題に対して適用し，要求仕様書，設計仕様書，テスト仕様書等を作成できる.</li>
+</ol>
+<a id="more"></a>
+<hr />
+<h2 id="第一堂課"><a class="markdownIt-Anchor" href="#第一堂課"></a> 第一堂課</h2>
+<h3 id="ソフトウェア工学とは"><a class="markdownIt-Anchor" href="#ソフトウェア工学とは"></a> ソフトウェア工学とは？</h3>
+<p>コンピュータ・ソフトウェアの開発，運用，保守における生産性と品質の向上を実現するための技術体系や学問体系</p>
+<p>QCD 三個不同方向來分析</p>
+<ul>
+<li>Q:代表QUlity 品質</li>
+<li>C:代表Cost 成本</li>
+<li>D:代表Delivery Time 所需時間</li>
+</ul>
+<p><strong>ステークホルダ(stakeholder)</strong>:ソフトウェアの開発とその成果物にかかわりのあるすべての人</p>
+<p><strong>ステークホルダ(stakeholder)</strong>：之間的意見調整可能會要成軟體開發進程的緩慢。</p>
+<p><strong>デスマーチ (death march)</strong>：意指Software開發進展的疲憊以及龜速。</p>
+<p><strong>SLOC</strong>：プログラムの規模を測る指標として，プログラムの行数SLOCがよく使われる．</p>
+<p>下圖為軟體開發進程主要的流程</p>
+<img src="/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/image1_1.png" class="left" width="500" height="400" title="軟體開發進程">
+<hr />
+<h2 id="第二堂課"><a class="markdownIt-Anchor" href="#第二堂課"></a> 第二堂課</h2>
+<div class="note success">
+            <p>本課內容為開發設計流程模型的特徵以及手法的介紹</p>
+          </div>
+<h3 id="開發設計流程模型"><a class="markdownIt-Anchor" href="#開發設計流程模型"></a> 開發設計流程模型</h3>
+<p>ソフトウェア開発工程：仕事の進め方（プロセス）を理解する</p>
+<p>プロトタイプ(prototype)：意指軟體開發之前所設計的試驗品，可幫助確認開發方向以及想發得正誤性。</p>
+<ol>
+<li>
+<p><strong>ウォータフォールモデル(Waterfall Model)</strong>:如水流一般由上而下的作業方法。可以細分為上流工程(upper process)，下流工程(lower process)<br />
+優點</p>
+<ol>
+<li>開発の進捗管理(progress management)がしやすい</li>
+<li>多人数の共同作業となる大規模システムの開発でも実績がある</li>
+</ol>
+<p>缺點</p>
+<ol>
+<li>机上では要求事項や設計の詳細化・明確化には限界がある</li>
+<li>要求事項も時々刻々と変化する</li>
+<li>大量のドキュメントの作成を必要とする</li>
+</ol>
+</li>
+<li>
+<p>Ｖ字型モデル:（段階的詳細化; stepwise refinement）和（段階的統合化; stepwise integration）</p>
+</li>
+</ol>
+<img src="/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/image2_1.jpg" class="" width="500" height="400" title="軟體開發進程">
+<ol start="3">
+<li>スパイラルモデル(spiral model)：在每一個開發階段都重複的評估開發過程以及狀況為特徵。</li>
+<li>アジャイルプロセスモデル(agile process model)：現在常見的開發手法。<br />
+早期にリリースし，ユーザとの協力関係によりプロダクトを成長させていく方法と<br />
+エクストリームプログラミング（ＸＰ）がアジャイルプロセスを実践する手法として有名
+<ol>
+<li>短期開発の反復</li>
+<li>テスト計画先行(test first)</li>
+<li>ペアプログラミング(pair programming)</li>
+<li>連続同時レビューテスト</li>
+<li>随時リファクタリング</li>
+</ol>
+</li>
+</ol>
+<h3 id="要求分析與定義"><a class="markdownIt-Anchor" href="#要求分析與定義"></a> 要求分析與定義</h3>
+<p>要求分析與定義，為軟體開發流程中的一環，本階段著重於把客戶的要求作出分析以及實作上的評估並呈現與討論。</p>
+<h4 id="名詞解釋"><a class="markdownIt-Anchor" href="#名詞解釋"></a> 名詞解釋</h4>
+<ol>
+<li>要求:顧客的要求可分為機能要求與非機能要求。</li>
+<li>要求仕様：要求を具体的に記述したもの。
+<ol>
+<li>完全性（＝モレがない; complete)</li>
+<li>非曖昧性（＝明確; unambiguous，検証可能⇒できるだけ数値化）</li>
+<li>無矛盾性(consistent)</li>
+</ol>
+</li>
+</ol>
+<hr />
+<h2 id="第三堂課"><a class="markdownIt-Anchor" href="#第三堂課"></a> 第三堂課</h2>
+<div class="note success">
+            <p>本課內容為要求獲得中的分析手法</p>
+          </div>
+<pre class="mermaid" style="text-align: center;">
+            graph LR
+            要求獲得-->要求項目分析
+要求項目分析-->要求仕樣化
+          </pre>
+<h3 id="要求獲得"><a class="markdownIt-Anchor" href="#要求獲得"></a> 要求獲得</h3>
+<ol>
+<li>業務フロー図（workflow diagram):組織内の役割間の関連が分かるように作業や連絡の手順・流れを表した図</li>
+<li>ゴール指向分析（目的展開）</li>
+<li>ユースケース図(Usecase Diagram):システムの機能を表すユースケースとアクターの関係を表現したもの</li>
+<li>Usecase Scenario:Scenario意為劇本，將要求的順序以及由哪個部分掌管寫清楚。
+<ol>
+<li>アクター(Actor):シナリオに現れる登場人物．一般ユーザ，管理者など人間であることが多いが，外部システムや機械の場合もある.</li>
+<li>トリガー(Trigger):シナリオに記載される動作を起こすきっかけとなる事象</li>
+<li>シナリオ:演劇脚本のように，だれが，どういう状況で，いつ，何をすると，状況がどう変わるかを記述したもの</li>
+<li>事後条件:シナリオの動作によって，最終的に状況がどう変化するかを表したもの</li>
+</ol>
+</li>
+</ol>
+<h2 id="第四堂課"><a class="markdownIt-Anchor" href="#第四堂課"></a> 第四堂課</h2>
+<div class="note success">
+            <p>本課內容為使用構造化分析手法來理解以下所出現的「要求的仕樣化」內容</p>
+          </div>
+<p>什麼是構造化分析？</p>
+<p>構造化分析是一種幫助軟體開發的一種分析手法，主要的特徵為</p>
+<ul>
+<li>段階的詳細化</li>
+<li>図示</li>
+</ul>
+<p>來幫助客戶以及分析者擁有完整以及良好的溝通效果</p>
+<p>構造化分析的手法的提倡者：DeMarco的分析方式為</p>
+<pre class="mermaid" style="text-align: center;">
+            graph LR
+            A(Data Flow Diagram)-->B(Data Dictionary)
+B-->C(Mini Specification)
+          </pre>
+<ol>
+<li>Data Flow Diagram：顧客や設計者に分かりやすくデータや処理の流れを説明</li>
+<li>Data Dictionary：データ項目の漏れや認識違いを防ぐ</li>
+<li>Mini Specification：処理手続きを文章や疑似プログラムで表現</li>
+</ol>
+<img src="/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/image4_1.png" class="left" width="300" height="300" title="DFD">
+<img src="/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/image4_2.png" class="right" width="300" height="300" title="DFD示例">
+<h3 id="要求的仕樣化"><a class="markdownIt-Anchor" href="#要求的仕樣化"></a> 要求的仕樣化</h3>
+<ol>
+<li>データフローモデル(data flow model):対象物（データ）を処理する順序を図示する手法</li>
+<li>データ辞書:データ項目が他のデータや値からどのように構成されるかを言語生成規則のように表現する手法</li>
+<li>状態遷移モデル(state transition model):「状態」をノードとし，「事象（イベント）」による「状態の遷移」をノードとノード間とエッジで表したもの</li>
+<li>決定表（ディシジョンテーブル）:複雑な条件を整理して，行動を記述するための表</li>
+<li>実体関連モデル(entity relationship model; ERmodel):実体（エンティティ）間の関係を図示したもの</li>
+</ol>
+<img src="/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/image4_3.png" class="" width="600" height="200" title="ER-Model示例">
+<h2 id="第五堂課"><a class="markdownIt-Anchor" href="#第五堂課"></a> 第五堂課</h2>
+<div class="note success">
+            <p>本課內容為物件導向的仕樣化分析</p>
+          </div>
+<p>什麼是物件導向分析？</p>
+<p>実世界のモ<br />
+デルをソフトウェアで表現するために「オブジェクト」を構<br />
+成単位としてソフトウェアを構築する枠組み.</p>
+<table>
+<thead>
+<tr>
+<th>構造化分析</th>
+<th>オブジェクト指向分析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>機能中心</td>
+<td>オブジェクト中心</td>
+</tr>
+<tr>
+<td>処理（プロセス）へデータが流れてくる</td>
+<td>オブジェクトへメッセージがくる</td>
+</tr>
+<tr>
+<td>データフロー図</td>
+<td>クラス図，オブジェクト図など</td>
+</tr>
+<tr>
+<td>手続き型言語: COBOL, PL/I, C言語</td>
+<td>オブジェクト指向言語 ：Java,C++</td>
+</tr>
+</tbody>
+</table>
+<h3 id="使用物件導向的好處"><a class="markdownIt-Anchor" href="#使用物件導向的好處"></a> 使用物件導向的好處</h3>
+<ol>
+<li>手続き型：プログラマーがデータ型を意識して，適切な手続き（関数）を選ぶ必要がある.</li>
+<li>オブジェクト指向：オブジェクトが自分自身のデータの操作方法を知っているので，メッセージを送るだけで良い.</li>
+</ol>
+<h3 id="物件導向的基本概念"><a class="markdownIt-Anchor" href="#物件導向的基本概念"></a> 物件導向的基本概念</h3>
+<ol>
+<li><strong>メッセージパッシング</strong>:機能を呼び出すのではなく，オブジェクトにメッセージを送ることで処理を依頼する考え方</li>
+<li><strong>カプセル化</strong> : データ（属性）とそれに特化した操作（メソッド）をまとめてモジュール化すること</li>
+<li><strong>クラスとインスタンス</strong>:データの構造と操作が同じインスタンスを簡単に作る仕組み</li>
+<li><strong>継承</strong> : クラスを階層化し，親クラス（上位クラス）のもつ属性操作を子クラス（下位クラス）の属性・操作として共有することで冗長性を削減する仕組み</li>
+</ol>
+<h2 id="第六堂課"><a class="markdownIt-Anchor" href="#第六堂課"></a> 第六堂課</h2>
+<div class="note success">
+            <p>本課內容為介紹物件導向的仕樣化分析中使用的手法，具體有Class Diagram ,Sequence Diagram 和遷移機械図</p>
+          </div>
+<img src="/2020/07/27/%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88/image6_1.png" class="" title="UML示例">
+<h2 id="第11堂課"><a class="markdownIt-Anchor" href="#第11堂課"></a> 第11堂課</h2>
 <p>内容:ソフトウェアテストと品質管理<br />
 テストには色々なプロセスはあるが、今回はテストケースの生成とテスト実行を注目する。</p>
 <hr />
@@ -416,7 +611,7 @@ It’s hard to detect all bugs by the coverage way</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第11堂課"><span class="nav-number">1.</span> <span class="nav-text"> 第11堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#テストの種類"><span class="nav-number">1.1.</span> <span class="nav-text"> テストの種類</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#単体テスト"><span class="nav-number">1.2.</span> <span class="nav-text"> 単体テスト</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一堂課"><span class="nav-number">2.</span> <span class="nav-text"> 第一堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ソフトウェア工学とは"><span class="nav-number">2.1.</span> <span class="nav-text"> ソフトウェア工学とは？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二堂課"><span class="nav-number">3.</span> <span class="nav-text"> 第二堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#開發設計流程模型"><span class="nav-number">3.1.</span> <span class="nav-text"> 開發設計流程模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#要求分析與定義"><span class="nav-number">3.2.</span> <span class="nav-text"> 要求分析與定義</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#名詞解釋"><span class="nav-number">3.2.1.</span> <span class="nav-text"> 名詞解釋</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三堂課"><span class="nav-number">4.</span> <span class="nav-text"> 第三堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求獲得"><span class="nav-number">4.1.</span> <span class="nav-text"> 要求獲得</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四堂課"><span class="nav-number">5.</span> <span class="nav-text"> 第四堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求的仕樣化"><span class="nav-number">5.1.</span> <span class="nav-text"> 要求的仕樣化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五堂課"><span class="nav-number">6.</span> <span class="nav-text"> 第五堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用物件導向的好處"><span class="nav-number">6.1.</span> <span class="nav-text"> 使用物件導向的好處</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物件導向的基本概念"><span class="nav-number">6.2.</span> <span class="nav-text"> 物件導向的基本概念</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六堂課"><span class="nav-number">7.</span> <span class="nav-text"> 第六堂課</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第11堂課"><span class="nav-number">8.</span> <span class="nav-text"> 第11堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#テストの種類"><span class="nav-number">8.1.</span> <span class="nav-text"> テストの種類</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#単体テスト"><span class="nav-number">8.2.</span> <span class="nav-text"> 単体テスト</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -489,12 +684,12 @@ It’s hard to detect all bugs by the coverage way</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="總字數">29k</span>
+    <span title="總字數">32k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="所需總閱讀時間">52 分鐘</span>
+    <span title="所需總閱讀時間">58 分鐘</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 強力驅動 v4.2.1
   </div>

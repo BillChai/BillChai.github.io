@@ -285,14 +285,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">文章字數：</span>
-              <span>5.4k</span>
+              <span>7.1k</span>
             </span>
             <span class="post-meta-item" title="所需閱讀時間">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-              <span>10 分鐘</span>
+              <span>13 分鐘</span>
             </span>
 
         </div>
@@ -609,9 +609,83 @@ B-->C(Mini Specification)
 </tr>
 </tbody>
 </table>
-<h2 id="第11堂課"><a class="markdownIt-Anchor" href="#第11堂課"></a> 第11堂課</h2>
-<p>内容:ソフトウェアテストと品質管理<br />
-テストには色々なプロセスはあるが、今回はテストケースの生成とテスト実行を注目する。</p>
+<h3 id="構造化プログラミングstructured-programming"><a class="markdownIt-Anchor" href="#構造化プログラミングstructured-programming"></a> 構造化プログラミング(structured programming)</h3>
+<p>構造化プログラミング＝プログラムを構造的に書く上での指針</p>
+<ol>
+<li>制御構造 (control structure)
+<ol>
+<li>GOTO文を際限なく使うとスパゲティプログラムになるので避けよう</li>
+<li>逐次，選択，反復の3種類のブロック（＝構造を組み立てる要素）で構成すると，ブロックの入り口と出口が一つになり，上から下に読めるから読みやすい</li>
+</ol>
+</li>
+<li>データ構造 (data structure)
+<ol>
+<li>全てのデータを一次元的に並べるだけだと解析しづらいので避けよう</li>
+<li>配列，構造体を使って構成する</li>
+</ol>
+</li>
+<li>段階的詳細化（stepwise refinement）<br />
+いきなり細かい処理の記述をせずに，プログラムの処理概要から段階的に詳細化していこう</li>
+</ol>
+<p>構造化定理為使用逐次（順次，順接），選択（分岐），反復三種構造組成的。</p>
+<h3 id="code的可讀性coding-standardconvention"><a class="markdownIt-Anchor" href="#code的可讀性coding-standardconvention"></a> Code的可讀性(coding standard/convention)</h3>
+<p>目的：可読性や保守性を高める</p>
+<p>規約の概要:</p>
+<ol>
+<li>変数や関数の命名規則
+<ul>
+<li>分かり易い名前にする</li>
+<li>キャメルケース(getFileName())，スネークケース(get_file_name())</li>
+</ul>
+</li>
+<li>コーディングの規則
+<ul>
+<li>コメントの記載内容</li>
+<li>空白文字，インデント，改行の入れ方</li>
+</ul>
+</li>
+<li>禁止事項
+<ul>
+<li>大域変数やgoto文の禁止</li>
+</ul>
+</li>
+<li>その他
+<ul>
+<li>著作権表記</li>
+</ul>
+</li>
+</ol>
+<h3 id="開發環境的介紹"><a class="markdownIt-Anchor" href="#開發環境的介紹"></a> 開發環境的介紹</h3>
+<p>統合開発環境(IDE; Integrated Development Environment)</p>
+<p>擁有以下三個部分</p>
+<ol>
+<li>Editor</li>
+<li>Debug,性能解析ツール（プロファイラ）</li>
+<li>Compiler</li>
+<li>版本管理或小組管理</li>
+</ol>
+<p>高級語言</p>
+<ol>
+<li>手続き型プログラミング：コンピュータの処理手順を命令文で記述する
+<ul>
+<li>例：FORTRAN, COBOL, BASIC, PASCAL, C, Ada, Java</li>
+</ul>
+</li>
+<li>関数型プログラミング：複数の関数の組み合わせ（合成）によって処理を記述する
+<ul>
+<li>例：Lisp, Scheme, Haskell</li>
+</ul>
+</li>
+<li>論理型プログラミング：入出力関係を述語論理（事実と規則）で記述す
+<ul>
+<li>例：Prolog</li>
+</ul>
+</li>
+</ol>
+<h2 id="第十堂課"><a class="markdownIt-Anchor" href="#第十堂課"></a> 第十堂課</h2>
+<div class="note success">
+            <p>本章節著重於介紹軟體開發時針對開發狀況以及開發過程的評估方式</p>
+          </div>
 <hr />
 <p>ソフトウェアの品質管理では**欠陥はなるべく早期に除去するのが鉄則。**そのために、プログラムの検査を行い、単体テスト、システムテストや受入検査などの方法がある。</p>
 <p>ソフトウェアテスト:正しいだけじゃなく、欠陥を見つ けるためにテストを行う。</p>
@@ -647,6 +721,81 @@ It’s hard to detect all bugs by the coverage way</p>
 <li>Loop bug is hard to detect</li>
 <li>Hard to detect bugs when the document was not detail enough - Some special Time Bugs</li>
 </ul>
+<h2 id="第十ㄧ堂課"><a class="markdownIt-Anchor" href="#第十ㄧ堂課"></a> 第十ㄧ堂課</h2>
+<div class="note success">
+            <p>本章節著重於介紹軟體開發時品質的評估以及希望到達的品質特徵。</p>
+          </div>
+<p>結合テスト項目表：設計仕様書に記載された仕様どおりにプログラムが動作することを確認。</p>
+<p>状態遷移テスト：状態遷移マトリックスのとおりにソフトウェアが動作しているかチェック。</p>
+<h3 id="信頼度成長曲線和欠陥分析"><a class="markdownIt-Anchor" href="#信頼度成長曲線和欠陥分析"></a> 信頼度成長曲線和欠陥分析</h3>
+<p>信頼度成長曲線：テストの進捗（時間経過）を横軸に，検出したバグの数を縦軸にしたグラフ（バグ管理図，バグ曲線などとも呼ぶ）。</p>
+<ol>
+<li>バグ検出数が目標値を大きく上回る場合
+<ul>
+<li>モジュールの品質が非常に低い可能性</li>
+<li>品質の悪いモジュールのレビューや単体テストからやり直す</li>
+<li>予測値を見直し</li>
+</ul>
+</li>
+<li>バグ検出数が目標値を大きく下回る場合
+<ul>
+<li>テストケースが不適切である可能性</li>
+<li>テストケースの見直し</li>
+<li>予測値の見直し</li>
+</ul>
+</li>
+<li>バグ検出数が収束していない場合
+<ul>
+<li>モジュールの品質が非常に低い可能性</li>
+<li>品質の悪いモジュールのレビューやテストをやり直す</li>
+<li>目標値を見直し</li>
+</ul>
+</li>
+<li>信頼度成長曲線が収束傾向にあり，バグ検出数の実績と目標値の差が小さい
+<ul>
+<li>作り込んだバグを十分に摘出した</li>
+<li>テスト終了</li>
+</ul>
+</li>
+</ol>
+<h3 id="ソフトウェア品質特性"><a class="markdownIt-Anchor" href="#ソフトウェア品質特性"></a> ソフトウェア品質特性</h3>
+<ul>
+<li>製品品質と利用品質</li>
+<li>機能性，信頼性，使用性，効率性，保守性，可搬性</li>
+</ul>
+<h2 id="第十二堂課"><a class="markdownIt-Anchor" href="#第十二堂課"></a> 第十二堂課</h2>
+<div class="note success">
+            <p>本章節著重於介紹軟體開發時的時間管理以及時序列評估方式</p>
+          </div>
+<p>本章節引用PMBOK (project management body of knowledge)方面的想法以及評估方式</p>
+<h3 id="時間管理タイムマネジメント"><a class="markdownIt-Anchor" href="#時間管理タイムマネジメント"></a> 時間管理（タイムマネジメント）</h3>
+<p>目的：プロジェクトを所定の時期に完了させること<br />
+ガントチャート(Gantt chart)：プロジェクトを管理するために、作業項目を木構造で階層を表示し、全体の作<br />
+業の流れおよび進捗状況を表したもの</p>
+<ul>
+<li>計画</li>
+<li>進捗管理</li>
+<li>WBS(work breakdown structure): プロジェクトを作業項目（タスク）に分解</li>
+</ul>
+<p>PERT図の作成方法</p>
+<ol>
+<li>ＷＢＳの作成</li>
+<li>タスクの所要時間を見積もる</li>
+<li>タスクの順序関係を設定する</li>
+<li>PERT図（アローダイアグラム）を作成する</li>
+<li>最短所要時間を算出する</li>
+<li>重点作業項目の洗い出し</li>
+</ol>
+<h3 id="進捗管理"><a class="markdownIt-Anchor" href="#進捗管理"></a> 進捗管理</h3>
+<p>進捗管理：プロセスの実行（実働）が計画に沿っているかを監視（モニタリング）し，計画からのずれが小さくなるよう制御すること</p>
+<h3 id="考試"><a class="markdownIt-Anchor" href="#考試"></a> 考試</h3>
+<ol>
+<li>STS分割</li>
+<li>システムの機能を表した図的判別</li>
+<li>圖題</li>
+<li>物件導向</li>
+<li>ユースケースシナリオ</li>
+</ol>
 
     </div>
 
@@ -733,7 +882,7 @@ It’s hard to detect all bugs by the coverage way</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一堂課"><span class="nav-number">2.</span> <span class="nav-text"> 第一堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ソフトウェア工学とは"><span class="nav-number">2.1.</span> <span class="nav-text"> ソフトウェア工学とは？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二堂課"><span class="nav-number">3.</span> <span class="nav-text"> 第二堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#開發設計流程模型"><span class="nav-number">3.1.</span> <span class="nav-text"> 開發設計流程模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#要求分析與定義"><span class="nav-number">3.2.</span> <span class="nav-text"> 要求分析與定義</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#名詞解釋"><span class="nav-number">3.2.1.</span> <span class="nav-text"> 名詞解釋</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三堂課"><span class="nav-number">4.</span> <span class="nav-text"> 第三堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求獲得"><span class="nav-number">4.1.</span> <span class="nav-text"> 要求獲得</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四堂課"><span class="nav-number">5.</span> <span class="nav-text"> 第四堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求的仕樣化"><span class="nav-number">5.1.</span> <span class="nav-text"> 要求的仕樣化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五堂課"><span class="nav-number">6.</span> <span class="nav-text"> 第五堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用物件導向的好處"><span class="nav-number">6.1.</span> <span class="nav-text"> 使用物件導向的好處</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物件導向的基本概念"><span class="nav-number">6.2.</span> <span class="nav-text"> 物件導向的基本概念</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六堂課"><span class="nav-number">7.</span> <span class="nav-text"> 第六堂課</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七堂課"><span class="nav-number">8.</span> <span class="nav-text"> 第七堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求割り付け"><span class="nav-number">8.1.</span> <span class="nav-text"> 要求割り付け</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ソフトウェアアーキテクチャ"><span class="nav-number">8.2.</span> <span class="nav-text"> ソフトウェアアーキテクチャ</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第八堂課"><span class="nav-number">9.</span> <span class="nav-text"> 第八堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#モジュール設計とは"><span class="nav-number">9.1.</span> <span class="nav-text"> モジュール設計とは</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#構造化設計"><span class="nav-number">9.2.</span> <span class="nav-text"> 構造化設計</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#データの流れに着目した分割技法"><span class="nav-number">9.2.1.</span> <span class="nav-text"> データの流れに着目した分割技法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#データの構造に着目した分割技法"><span class="nav-number">9.2.2.</span> <span class="nav-text"> データの構造に着目した分割技法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#モジュール分割の評価"><span class="nav-number">9.3.</span> <span class="nav-text"> モジュール分割の評価</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#デザインパタン"><span class="nav-number">9.4.</span> <span class="nav-text"> デザインパタン</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#フレームワーク"><span class="nav-number">9.5.</span> <span class="nav-text"> フレームワーク</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第九堂課"><span class="nav-number">10.</span> <span class="nav-text"> 第九堂課</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第11堂課"><span class="nav-number">11.</span> <span class="nav-text"> 第11堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#テストの種類"><span class="nav-number">11.1.</span> <span class="nav-text"> テストの種類</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#単体テスト"><span class="nav-number">11.2.</span> <span class="nav-text"> 単体テスト</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一堂課"><span class="nav-number">2.</span> <span class="nav-text"> 第一堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ソフトウェア工学とは"><span class="nav-number">2.1.</span> <span class="nav-text"> ソフトウェア工学とは？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二堂課"><span class="nav-number">3.</span> <span class="nav-text"> 第二堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#開發設計流程模型"><span class="nav-number">3.1.</span> <span class="nav-text"> 開發設計流程模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#要求分析與定義"><span class="nav-number">3.2.</span> <span class="nav-text"> 要求分析與定義</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#名詞解釋"><span class="nav-number">3.2.1.</span> <span class="nav-text"> 名詞解釋</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三堂課"><span class="nav-number">4.</span> <span class="nav-text"> 第三堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求獲得"><span class="nav-number">4.1.</span> <span class="nav-text"> 要求獲得</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四堂課"><span class="nav-number">5.</span> <span class="nav-text"> 第四堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求的仕樣化"><span class="nav-number">5.1.</span> <span class="nav-text"> 要求的仕樣化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五堂課"><span class="nav-number">6.</span> <span class="nav-text"> 第五堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用物件導向的好處"><span class="nav-number">6.1.</span> <span class="nav-text"> 使用物件導向的好處</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物件導向的基本概念"><span class="nav-number">6.2.</span> <span class="nav-text"> 物件導向的基本概念</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六堂課"><span class="nav-number">7.</span> <span class="nav-text"> 第六堂課</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七堂課"><span class="nav-number">8.</span> <span class="nav-text"> 第七堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#要求割り付け"><span class="nav-number">8.1.</span> <span class="nav-text"> 要求割り付け</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ソフトウェアアーキテクチャ"><span class="nav-number">8.2.</span> <span class="nav-text"> ソフトウェアアーキテクチャ</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第八堂課"><span class="nav-number">9.</span> <span class="nav-text"> 第八堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#モジュール設計とは"><span class="nav-number">9.1.</span> <span class="nav-text"> モジュール設計とは</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#構造化設計"><span class="nav-number">9.2.</span> <span class="nav-text"> 構造化設計</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#データの流れに着目した分割技法"><span class="nav-number">9.2.1.</span> <span class="nav-text"> データの流れに着目した分割技法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#データの構造に着目した分割技法"><span class="nav-number">9.2.2.</span> <span class="nav-text"> データの構造に着目した分割技法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#モジュール分割の評価"><span class="nav-number">9.3.</span> <span class="nav-text"> モジュール分割の評価</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#デザインパタン"><span class="nav-number">9.4.</span> <span class="nav-text"> デザインパタン</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#フレームワーク"><span class="nav-number">9.5.</span> <span class="nav-text"> フレームワーク</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第九堂課"><span class="nav-number">10.</span> <span class="nav-text"> 第九堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#構造化プログラミングstructured-programming"><span class="nav-number">10.1.</span> <span class="nav-text"> 構造化プログラミング(structured programming)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#code的可讀性coding-standardconvention"><span class="nav-number">10.2.</span> <span class="nav-text"> Code的可讀性(coding standard&#x2F;convention)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#開發環境的介紹"><span class="nav-number">10.3.</span> <span class="nav-text"> 開發環境的介紹</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十堂課"><span class="nav-number">11.</span> <span class="nav-text"> 第十堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#テストの種類"><span class="nav-number">11.1.</span> <span class="nav-text"> テストの種類</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#単体テスト"><span class="nav-number">11.2.</span> <span class="nav-text"> 単体テスト</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十ㄧ堂課"><span class="nav-number">12.</span> <span class="nav-text"> 第十ㄧ堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#信頼度成長曲線和欠陥分析"><span class="nav-number">12.1.</span> <span class="nav-text"> 信頼度成長曲線和欠陥分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ソフトウェア品質特性"><span class="nav-number">12.2.</span> <span class="nav-text"> ソフトウェア品質特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第十二堂課"><span class="nav-number">13.</span> <span class="nav-text"> 第十二堂課</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#時間管理タイムマネジメント"><span class="nav-number">13.1.</span> <span class="nav-text"> 時間管理（タイムマネジメント）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#進捗管理"><span class="nav-number">13.2.</span> <span class="nav-text"> 進捗管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#考試"><span class="nav-number">13.3.</span> <span class="nav-text"> 考試</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -806,12 +955,12 @@ It’s hard to detect all bugs by the coverage way</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="總字數">33k</span>
+    <span title="總字數">35k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="所需總閱讀時間">1:01</span>
+    <span title="所需總閱讀時間">1:04</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 強力驅動 v4.2.1
   </div>
